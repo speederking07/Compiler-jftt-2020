@@ -1,0 +1,39 @@
+[
+    Test 13
+    Dostęp to tablicy z dwóch wskaźników
+
+    Przykladowe dane testowe:
+        1. ? 40
+           > 4
+           > 8
+           > 4
+        2. ? 200
+           > 4
+           > 8
+           > 4
+]
+DECLARE
+	a, b, tab(0:1000)
+BEGIN
+    READ a;
+    tab(a) := 0;
+    b := a + 1;
+    tab(b) := 0;
+    b := b + 1;
+    tab(b) := 0;
+    FOR _ FROM 0 TO 3 DO
+        tab(a) := tab(a) + 1;
+        b := a + 2;
+        tab(b) := tab(b) + 1;
+        a := a + 1;
+        b := b - 1;
+        tab(a) := tab(a) + 1;
+        tab(b) := tab(b) + 1;
+        a := a - 1;
+        b := b + 1;
+    ENDFOR
+    WRITE tab(a);    
+    a:= a + 1;
+    WRITE tab(a);
+    WRITE tab(b);
+END

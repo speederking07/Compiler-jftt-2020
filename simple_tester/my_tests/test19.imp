@@ -1,0 +1,19 @@
+[
+    Test 19
+    Proste wypełnianie tablicy
+
+    Przykladowe dane testowe:
+        1. ? 10
+           > 10
+        2. ? 1000
+           ? 1000
+]
+DECLARE
+    a, tab(0:1000)
+BEGIN
+    READ a;
+    FOR i FROM 0 TO 1000 DO
+        tab(i) := a;
+    ENDFOR
+    WRITE tab(41);
+END

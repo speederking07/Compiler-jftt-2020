@@ -1,0 +1,23 @@
+[
+  OUTPUT:
+  > 1
+]
+DECLARE
+  n, c, z, w
+BEGIN
+  n := 100;
+  c := 1;
+  FOR x FROM 0 TO n DO
+    FOR y FROM 0 TO n DO
+      z := 0;
+      FOR i FROM 1 TO y DO
+        z := z + x;
+      ENDFOR
+      w := x * y;
+      IF z != w THEN
+        c := 0;
+      ENDIF
+    ENDFOR
+  ENDFOR
+  WRITE c;
+END

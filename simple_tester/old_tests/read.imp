@@ -1,0 +1,11 @@
+[
+    Przykladowe dane testowe:
+    ? 1234567
+    > 1234567
+]
+DECLARE
+    x
+BEGIN
+    READ x;
+    WRITE x;
+END

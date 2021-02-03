@@ -1,0 +1,24 @@
+[
+  Przykladowe dane testowe:
+  1.  ? 1234567
+      ? 321
+      > 1
+  2.  ? 67000
+      ? 1000
+      > 1000
+]
+DECLARE
+  a, b, c
+BEGIN
+  READ a;
+  READ b;
+  IF a < b THEN
+    b := b % a;
+  ENDIF
+  WHILE b > 0 DO
+    c := a % b;
+    a := b;
+    b := c;
+  ENDWHILE
+  WRITE a;
+END

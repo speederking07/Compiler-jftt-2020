@@ -1,0 +1,30 @@
+[
+    Test 33
+    Jak nie mnożyć 3 liczb
+
+    Przykladowe dane testowe:
+        1.  ? 40
+            ? 30
+            ? 20
+            > 24000
+        2.  ? 1000    
+            ? 1234
+            ? 0
+            > 0
+]
+DECLARE
+    a, b, c, res
+BEGIN
+    READ a;
+    READ b;
+    READ c;
+    res := 0;
+    FOR i FROM 1 TO a DO
+        FOR j FROM b DOWNTO 1 DO
+            FOR k FROM 1 TO c DO
+                res := res + 1;
+            ENDFOR
+        ENDFOR
+    ENDFOR
+    WRITE res;
+END

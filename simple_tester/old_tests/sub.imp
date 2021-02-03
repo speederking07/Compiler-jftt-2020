@@ -1,0 +1,11 @@
+[
+    OUTPUT:
+    > 0
+]
+DECLARE
+    x
+BEGIN
+    x := 12;
+    x := x - x;
+    WRITE x;
+END

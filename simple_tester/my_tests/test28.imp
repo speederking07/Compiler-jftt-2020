@@ -1,0 +1,38 @@
+[
+    Test 28
+    Until
+
+    Przykladowe dane testowe:
+        1.  ? 15
+            ? 4
+            > 5
+        2.  ? 0
+            ? 5
+            > 8
+]
+DECLARE
+    a, b, c, d, ta(0:2), tb(0:2), tc(0:2), td(0:2)
+BEGIN
+    READ a;
+    a := a/a;
+    b := a;
+    c := a;
+    d := a;
+    READ td(d);
+    ta(2) := 0;
+    ta(a) := 0;
+    tb(b) := 1;
+    REPEAT
+        d := d * 5;
+        tc(c) := ta(a) + tb(b);
+        c := c + 1000;
+        ta(a) := tb(b);
+        c := c - 1000;
+        a := a * 1024;
+        tb(b) := tc(c);
+        a := a / 1024;
+        d := d / 5;
+        td(d) := td(d) - 1;
+    UNTIL td(d) = ta(2);
+    WRITE tc(c);
+END

@@ -1,0 +1,32 @@
+[
+    Test 18
+    Zwijanie stałych w zmiennych tablicowych
+
+    Przykladowe dane testowe:
+        1. ? 10
+           > 80
+           > 10
+        2. ? 1000
+           > 80
+           > 1000
+]
+DECLARE
+    a, b, c, tab(0:1000000)
+BEGIN
+    READ a;
+    tab(0) := 0/0;
+    tab(1) := 1;
+    tab(2) := 2;
+    tab(3) := 9/3;
+    FOR i FROM 30 DOWNTO 3 DO
+        tab(i) := tab(1) - tab(2);
+    ENDFOR
+    b := 2;
+    tab(b) := 40;
+    tab(b) := tab(b) + tab(b);
+    c := 81/27;
+    tab(b) := tab(b) + tab(c);
+    tab(0) := a + tab(0);
+    WRITE tab(b);
+    WRITE tab(0);
+END

@@ -1,0 +1,40 @@
+[
+    Test 22
+    Dwie długie pętle for
+
+    Przykladowe dane testowe:
+        1. ? 10
+           > 10
+           > 100000
+           > 0
+           > 0
+        2. ? 13
+           > 13
+           > 371293
+           > 9
+           > 81
+]
+DECLARE
+    a, ta(0:1000), tb(0:1000), tc(0:1000), td(0:1000), te(0:1000)
+BEGIN
+    READ a;
+    FOR i FROM 0 TO 1000 DO
+        ta(i) := a;
+        tb(i) := ta(i) * a;
+        tc(i) := tb(i) * a;
+        td(i) := tc(i) * a;
+        te(i) := td(i) * a;
+    ENDFOR
+    WRITE ta(0);
+    WRITE te(1000);
+    a := a % 10;
+    FOR i FROM 0 TO 1000 DO
+        ta(i) := a;
+        tb(i) := ta(i) * a;
+        tc(i) := tb(i) * a;
+        td(i) := tc(i) * a;
+        te(i) := td(i) * a;
+    ENDFOR
+    WRITE tb(0);
+    WRITE td(1000);
+END

@@ -1,0 +1,55 @@
+[
+    Test 24
+    Select sort
+
+    Przykladowe dane testowe:
+    1.  ? 6            
+        ? 43       
+        ? 2    
+        ? 33       
+        ? 22       
+        ? 77       
+        ? 11       
+        > 2    
+        > 11       
+        > 22       
+        > 33       
+        > 43       
+        > 77   
+    2.  ? 6
+        ? 92
+        ? 64
+        ? 32
+        ? 11
+        ? 82
+        ? 55
+        > 11
+        > 32
+        > 55
+        > 64
+        > 82
+        > 92 
+]
+DECLARE
+	n, max, max_pos, tab(1:1000)
+BEGIN
+    READ n;
+    FOR i FROM 1 TO n DO
+        READ tab(i);
+    ENDFOR
+    FOR i FROM n DOWNTO 0 DO
+        max := tab(i);
+        max_pos := i;
+        FOR j FROM 1 TO i DO
+            IF max < tab(j) THEN
+                max := tab(j);
+                max_pos := j;
+            ENDIF
+        ENDFOR
+        tab(max_pos) := tab(i);
+        tab(i) := max;
+    ENDFOR
+    FOR i FROM 1 TO n DO
+        WRITE tab(i);
+    ENDFOR
+END

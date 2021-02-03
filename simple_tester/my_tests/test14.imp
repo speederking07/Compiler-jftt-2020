@@ -1,0 +1,30 @@
+[
+    Test 14
+    Usuwanie bezużytecznych przypisań
+
+    Przykladowe dane testowe:
+        1. ? 30
+           > 60
+        2. ? 10000000
+           > 20000000
+]
+DECLARE
+	a, b, c, d, e, f
+BEGIN
+    READ a;
+    b := 0;
+    c := 34/2;
+    WHILE b < a DO
+        b := b + 1;
+    ENDWHILE
+    a := a + b;
+    d := 17 - c;
+    a := a + d;
+    e := 400;
+    f := 0;
+    FOR i FROM e DOWNTO 0 DO
+        f := f + e;
+        e := e - 1;
+    ENDFOR
+    WRITE a;
+END

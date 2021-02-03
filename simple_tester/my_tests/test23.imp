@@ -1,0 +1,29 @@
+[
+    Test 23
+    Generowanie stałych
+
+    Przykladowe dane testowe:
+        1. ? 7 
+           > 4 
+           > 5 
+           > 6 
+           > 7 
+        2. ? 6
+           > 4
+           > 5
+           > 6
+           > 6
+]
+DECLARE
+    a, tab(0:1000)
+BEGIN
+    READ a;
+    tab(4) := 4;
+    tab(6) := 6;
+    tab(5) := 5;
+    tab(a) := a;
+    WRITE tab(4);
+    WRITE tab(5);
+    WRITE tab(6);
+    WRITE tab(a);
+END

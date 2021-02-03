@@ -1,0 +1,26 @@
+[
+    Test 42
+    Odwrotność w pierścienu Z/p
+
+    Przykladowe dane testowe:
+    1.  ? 412
+        ? 541
+        > 130
+    2.  ? 90
+        ? 113
+        > 54
+]
+DECLARE
+    a, n, i, tmp
+BEGIN
+    READ a;
+    READ n;
+    i := 0;
+    REPEAT
+        i := i + 1;
+        tmp := a * i;
+        tmp := tmp % n;
+    UNTIL tmp = 1;
+    WRITE i;
+END
+

@@ -1,0 +1,7 @@
+[
+    OUTPUT:
+    > 42
+]
+BEGIN
+    WRITE 42;
+END

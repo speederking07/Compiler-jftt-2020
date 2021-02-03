@@ -1,0 +1,25 @@
+[
+    Test 38
+    Poprawne zwijanie pętli
+
+    OUTPUT:
+    > 1
+    > 1
+]
+DECLARE
+    a, b, c
+BEGIN
+    a := 313*312;
+    b := 0;
+    c := a + b;
+    REPEAT
+        WRITE 1;
+    UNTIL a = c;
+    WHILE a != c DO
+        WRITE 0;
+    ENDWHILE
+    FOR i FROM 0 TO 10000000 DO
+        c := c * c;
+    ENDFOR
+    WRITE 1;
+END

@@ -1,0 +1,27 @@
+[
+    Test 34
+    Dzielenie z resztą
+
+    Przykladowe dane testowe:
+        1.  ? 13
+            ? 4
+            > 3
+            > 1
+        2.  ? 4004
+            ? 2
+            > 2002
+            > 0
+]
+DECLARE
+    a, b, res
+BEGIN
+    READ a;
+    READ b;
+    res := 0;
+    WHILE a >= b DO
+        a := a - b;
+        res := res + 1;
+    ENDWHILE
+    WRITE res;
+    WRITE a;
+END

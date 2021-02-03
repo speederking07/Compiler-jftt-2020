@@ -1,0 +1,46 @@
+[
+    Test 21
+    Zagneźdzone instukcje warunkowe
+
+    Przykladowe dane testowe:
+        1. ? 65
+           > 180
+        2. ? 30
+           > 90
+        3. ? 7
+           > 18
+
+]
+DECLARE
+    a, b
+BEGIN
+    READ a;
+    b:= a % 6;
+    IF b = 0 THEN
+        a := a * 3;
+    ELSE
+        IF b = 1 THEN
+            a := a - 1;
+            a := a * 3;
+        ELSE
+            IF b = 2 THEN
+                a := a - 2;
+                a := a * 3;
+            ELSE
+                IF b = 3 THEN
+                    a := a - 3;
+                    a := a * 3;
+                ELSE
+                    IF b = 4 THEN
+                        a := a - 4;
+                        a := a * 3;
+                    ELSE
+                        a := a - 5;
+                        a := a * 3;
+                    ENDIF
+                ENDIF
+            ENDIF
+        ENDIF
+    ENDIF
+    WRITE a;
+END

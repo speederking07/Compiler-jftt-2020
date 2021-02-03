@@ -1,0 +1,26 @@
+[
+    Test 31
+    Obliczenie sumy częściowej \sum_{i=1}^{n} i^i
+
+        Przykladowe dane testowe:
+        1.  ? 4
+            > 288
+        2.  ? 5
+            > 3413
+]
+DECLARE
+    n, tmp, j, res
+BEGIN
+    READ n;
+    res := 0;
+    FOR i FROM 1 TO n DO
+        tmp := 1;
+        j := 0;
+        REPEAT
+            tmp := tmp * i;
+            j := j + 1;
+        UNTIL j = i;
+        res := res + tmp;
+    ENDFOR
+    WRITE res;
+END

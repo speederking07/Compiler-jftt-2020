@@ -1,0 +1,28 @@
+[
+    Test 40
+    Gdy for są useless
+
+    OUTPUT:
+        > 1
+        > 1
+        > 4
+        > 4
+]
+DECLARE
+    a, b
+BEGIN
+    a := 1234 * 1234;
+    b := a + 1;
+    FOR i FROM a TO b DO
+        WRITE 1;
+    ENDFOR
+    FOR i FROM b TO a DO
+        WRITE 2;
+    ENDFOR
+    FOR i FROM a DOWNTO b DO
+        WRITE 3;
+    ENDFOR
+    FOR i FROM b DOWNTO a DO
+        WRITE 4;
+    ENDFOR
+END

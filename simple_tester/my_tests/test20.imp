@@ -1,0 +1,22 @@
+[
+    Test 20
+    Wypełnianie tablicy
+
+    Przykladowe dane testowe:
+        1. ? 123
+           > 123456
+           > 123456
+           > 123456
+
+]
+DECLARE
+    a, tab(0:100000)
+BEGIN
+    READ a;
+    FOR i FROM 0 TO 100000 DO
+        tab(i) := 123456;
+    ENDFOR
+    WRITE tab(0);
+    WRITE tab(a);
+    WRITE tab(100000);
+END

@@ -1,0 +1,19 @@
+[
+  OUTPUT:
+  > 1
+]
+DECLARE
+x, y
+BEGIN
+x := 1;
+y := 1;
+IF x = y THEN
+  IF x != y THEN
+    WRITE 0;
+  ELSE
+    WRITE 1;
+  ENDIF
+ELSE
+  WRITE 0;
+ENDIF
+END

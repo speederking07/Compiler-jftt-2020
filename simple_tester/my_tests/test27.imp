@@ -1,0 +1,24 @@
+[
+    Test 27
+    Liczba jedynek w liczbie binarnej
+
+    Przykladowe dane testowe:
+        1.  ? 15
+            > 4
+        2.  ? 1024
+            > 1
+]
+DECLARE
+    a, res, tmp
+BEGIN
+    READ a;
+    res := 0;
+    REPEAT
+        tmp := a % 2;
+        IF tmp = 1 THEN
+            res := res + 1;
+        ENDIF
+        a := a / 2;
+    UNTIL a = 0;
+    WRITE res;
+END

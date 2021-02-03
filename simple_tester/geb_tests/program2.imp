@@ -1,0 +1,55 @@
+[ 
+    Rozklad liczby na czynniki pierwsze
+    Przykladowe dane testowe:
+    1.
+        ? 1234567890
+        > 2
+        > 1
+        > 3
+        > 2
+        > 5
+        > 1
+        > 3607
+        > 1
+        > 3803
+        > 1
+    2.
+        ? 12345678901
+        > 857
+        > 1
+        > 14405693
+        > 1
+    3.  
+        ? 12345678903
+        > 3
+        > 1
+        > 4115226301
+        > 1
+]
+DECLARE
+    n, m, reszta, potega, dzielnik
+BEGIN
+    READ n;
+    dzielnik := 2;
+    m := dzielnik * dzielnik;
+    WHILE n >= m DO
+        potega := 0;
+        reszta := n % dzielnik;
+        WHILE reszta = 0 DO
+            n := n / dzielnik;
+            potega := potega + 1;
+            reszta := n % dzielnik;
+        ENDWHILE
+        IF potega > 0 THEN [ czy znaleziono dzielnik ]
+            WRITE dzielnik;
+            WRITE potega;
+        ELSE
+            dzielnik := dzielnik + 1;
+            m := dzielnik * dzielnik;
+        ENDIF
+    ENDWHILE
+    IF n != 1 THEN [ ostatni dzielnik ]
+        WRITE n;
+        WRITE 1;
+    ENDIF
+END

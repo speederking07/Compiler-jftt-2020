@@ -1,0 +1,17 @@
+[Dziwne problemy]
+DECLARE
+  a, b, c, d, n
+BEGIN
+  READ a;
+  c := 0;
+  WHILE a <= 10 DO
+    b := a;
+    WHILE b <= 20 DO
+      WRITE b;
+      c := c + b;
+      b := b + 2;      
+    ENDWHILE
+    a := a + 1;
+  ENDWHILE
+  WRITE c;
+END

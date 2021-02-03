@@ -1,0 +1,15 @@
+[
+  OUTPUT:
+  > 0
+  > 1 > 0
+  > 2 > 1 > 0
+  > 3 > 2 > 1 > 0
+  > 4 > 3 > 2 > 1 > 0
+]
+BEGIN
+  FOR i FROM 0 TO 4 DO
+    FOR j FROM i DOWNTO 0 DO
+      WRITE j;
+    ENDFOR
+  ENDFOR
+END

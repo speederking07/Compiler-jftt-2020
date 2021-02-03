@@ -1,0 +1,54 @@
+[
+    Test 37
+    Modlimy się o poprawne zwijanie if'ów
+
+    OUTPUT:
+    > 1
+    > 1
+    > 1
+    > 1
+    > 1
+    > 1
+    > 1
+]
+DECLARE
+    zero, big
+BEGIN
+    zero := 4 - 4;
+    big := 2121212121*313213123123123123123123213;
+    IF big = big THEN
+        WRITE 1;
+    ELSE
+        WRITE 0;
+    ENDIF
+    IF 31 > zero THEN
+        WRITE 1;
+    ELSE
+        WRITE 0;
+    ENDIF
+    IF 31 < 4 THEN
+        WRITE 0;
+    ELSE
+        WRITE 1;
+    ENDIF
+    IF 31 <= 4 THEN
+        WRITE 0;
+    ELSE
+        WRITE 1;
+    ENDIF
+    IF big >= 313 THEN
+        WRITE 1;
+    ELSE
+        WRITE 0;
+    ENDIF
+    IF big >= 313 THEN
+        WRITE 1;
+    ELSE
+        WRITE 0;
+    ENDIF
+    IF zero != zero THEN
+        WRITE 0;
+    ELSE
+        WRITE 1;
+    ENDIF
+END

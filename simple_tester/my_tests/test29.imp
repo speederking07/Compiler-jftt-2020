@@ -1,0 +1,50 @@
+[
+    Test 29
+    Kolejne testy z Until
+
+    Przykladowe dane testowe:
+        1.  ? 4
+            > 256
+            > 256
+            > 256
+            > 256
+            > 256
+            > 256
+            > 256
+            > 256
+            > 1
+            > 1
+]
+DECLARE
+    a, b, c, d, e, f, g, h, i, j
+BEGIN
+    READ j;
+    i := 1;
+    a := 2;
+    REPEAT
+        a := a * a;
+        b := a;
+        a := a + 1;
+        c := b;
+        b := b * 2;
+        d := c;
+        e := d;
+        f := e;
+        g := f;
+        h := g;
+        a := a - 1;
+        b := b / 2;
+        j := j - 1;
+    UNTIL j = i;
+    WRITE a;
+    WRITE b;
+    WRITE c;
+    WRITE d;
+    WRITE e;
+    WRITE f;
+    WRITE g;
+    WRITE h;
+    WRITE i;
+    WRITE j;
+END
+    

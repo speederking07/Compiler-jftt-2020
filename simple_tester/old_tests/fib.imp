@@ -1,0 +1,31 @@
+[
+  Przykladowe dane testowe:
+  ? 10
+  > 0 > 1 > 1 > 2 > 3 > 5 > 8 > 13 > 21 > 34 > 55
+  ? 4 > 3 ? 55
+]
+DECLARE
+  n, i, j, a(0:50)
+BEGIN
+  READ n;
+  IF n < 50 THEN
+    i := 0;
+    j := 1;
+    a(0) := 0;
+    a(1) := 1;
+    FOR k FROM 2 TO n DO
+      a(k) := a(i) + a(j);
+      i := j;
+      j := k;
+    ENDFOR
+    FOR k FROM 0 TO n DO
+      WRITE a(k);
+    ENDFOR
+    READ i;
+    WHILE i <= n DO
+      WRITE a(i);
+      READ i;
+    ENDWHILE
+  ENDIF
+END
+

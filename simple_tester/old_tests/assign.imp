@@ -1,0 +1,10 @@
+[
+    OUTPUT:
+    > 12
+]
+DECLARE
+    x
+BEGIN
+    x := 12;
+    WRITE x;
+END

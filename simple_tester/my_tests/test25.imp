@@ -1,0 +1,32 @@
+[
+    Test 25
+    Rozbudowane pętle
+
+    Przykladowe dane testowe:
+        1. ? 0
+           > 0
+           > 12350
+           > 0
+        2. ? 1
+           > 0
+           > 12351
+           > 12351
+]
+DECLARE
+    a, b, c, d
+BEGIN
+    READ a;
+    a := a/a;
+    b := a + 10;
+    c := 1234;
+    d := 0;
+    REPEAT
+        a := a/a;
+        b := b + 10;
+        d := b * a;
+        c := c - 1;
+    UNTIL c = 0;
+    WRITE c; [c = 0]
+    WRITE b; [b = 12350 | 12351]
+    WRITE d; [d = 0 | 12351]
+END

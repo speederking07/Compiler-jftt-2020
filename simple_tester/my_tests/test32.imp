@@ -1,0 +1,38 @@
+[
+    Test 32
+    Obliczanie pierwiastka używając binary search
+
+    Przykladowe dane testowe:
+        1.  ? 121
+            > 11
+        2.  ? 1234321
+            > 1111
+]
+DECLARE
+    n, tmp, a, a_val, b, b_val, m, m_val, span
+BEGIN
+    READ n;
+    a := 0;
+    a_val := 0;
+    b := n;
+    b_val := b * b;
+    REPEAT
+        m := b + a;
+        m := m / 2;
+        m_val := m * m;
+        IF n < m_val THEN
+            b := m;
+            b_val := m_val;
+        ELSE
+            IF n > m_val THEN
+                a := m;
+                a_val := a_val;
+            ELSE
+                a := m;
+                b := m;
+            ENDIF
+        ENDIF
+        span := b - a;
+    UNTIL span <= 1;
+    WRITE a;
+END

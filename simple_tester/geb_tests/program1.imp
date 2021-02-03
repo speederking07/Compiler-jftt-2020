@@ -1,0 +1,46 @@
+[ sito Eratostenesa
+    Przykladowe dane testowe:
+    > 2
+    > 3
+    > 5
+    > 7
+    > 11
+    > 13
+    > 17
+    > 19
+    > 23
+    > 29
+    > 31
+    > 37
+    > 41
+    > 43
+    > 47
+    > 53
+    > 59
+    > 61
+    > 67
+    > 71
+    > 73
+    > 79
+    > 83
+    > 89
+    > 97
+]
+DECLARE
+    n, j, sito(2:100)
+BEGIN
+    n := 100;
+    FOR i FROM n DOWNTO 2 DO
+        sito(i) := 1;
+    ENDFOR
+    FOR i FROM 2 TO n DO
+        IF sito(i) != 0 THEN
+            j := i + i;
+            WHILE j <= n DO
+                sito(j) := 0;
+                j := j + i;
+            ENDWHILE
+            WRITE i;
+        ENDIF
+    ENDFOR
+END

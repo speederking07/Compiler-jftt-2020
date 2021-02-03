@@ -1,0 +1,30 @@
+[
+    Test 39
+    Prawie niepotrzebne obliczneia
+
+    Przykladowe dane testowe:
+        1.  ? 0
+            > 12345
+        1.  ? 123456
+            > 12345
+]
+DECLARE
+    a, b, c, d, tab(1:1000)
+BEGIN
+    tab(832) := 12345;
+    READ a;
+    IF a < 1 THEN
+        a := 1;
+        c := 122345;
+    ELSE
+        a := a / a;
+        c := 1234*9999;
+        d := 44;
+    ENDIF
+    d := 1000 - 169;
+    FOR i FROM 1 TO d DO
+        d := d * a;
+        a := a + 1;
+    ENDFOR
+    WRITE tab(a);
+END

@@ -1,0 +1,38 @@
+[
+    Test 30
+    Tablica i dwie pętle
+    Przykladowe dane testowe:
+        1.  ? 1
+            > 19998
+            > 1001
+        2.  ? 2
+            > 19998
+            > 501501
+]
+DECLARE
+    a, b, c, tab(0:10000), trush(0:10000)
+BEGIN
+    READ a;
+    FOR i FROM 0 TO 10000 DO
+        tab(i) := 1;
+        trush(i) := 0;
+    ENDFOR
+    b := 0;
+    REPEAT
+        trush(a) := 1992 + 212121;
+        trush(b) := trush(a) + a;
+        trush(b) := trush(b) - a;
+        trush(b) := trush(b) + 11;
+        FOR i FROM 1 TO 10000 DO
+            c := i - 1;
+            trush(a) := c;
+            tab(i) := tab(c) + tab(i);
+        ENDFOR
+        trush(b) := trush(a) * 10;
+        trush(b) := trush(b) / 5;
+        b := 1 + b;
+    UNTIL a = b;
+    b := b - 1;
+    WRITE trush(b);
+    WRITE tab(1000);
+END

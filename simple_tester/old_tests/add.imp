@@ -1,0 +1,22 @@
+[
+  add.imp
+  OUTPUT:
+    > 1
+]
+DECLARE
+  x, n
+BEGIN
+  n := 100;
+  x := 0;
+  FOR i FROM 1 TO n DO
+    x := x + i;
+  ENDFOR
+  FOR i FROM n DOWNTO 1 DO
+    x := i + x;
+  ENDFOR
+  IF x = 10100 THEN
+    WRITE 1;
+  ELSE
+    WRITE 0;
+  ENDIF
+END
